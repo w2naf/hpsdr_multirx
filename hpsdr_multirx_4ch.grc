@@ -6,7 +6,7 @@
     <key>options</key>
     <param>
       <key>author</key>
-      <value>John Ackermann N8UR</value>
+      <value>Nathaniel Frissell W2NAF</value>
     </param>
     <param>
       <key>window_size</key>
@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(712, 85)</value>
+      <value>(880, 68)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -132,7 +132,1288 @@
     </param>
     <param>
       <key>value</key>
-      <value>{'call':'&lt;call&gt;','grid':'&lt;6-digit-grid&gt;','rx':'&lt;radio&gt;','ant':'&lt;antenna&gt;'}</value>
+      <value>{'call':'W2NAF','grid':'&lt;6-digit-grid&gt;','rx':'Red Pitaya','ant':'DXE RF-PRO-1B'}</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(32, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_0</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>3.33e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'CHU_3300'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(144, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_1</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>3.596e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'HAM_3596'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(256, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_2</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>7.096e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'CHU_7850'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(368, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_3</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>7.096e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'HAM_7096'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(480, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_4</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>14.67e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'CHU_14670'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(592, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_5</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>14.096e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'HAM_14096'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_struct</key>
+    <param>
+      <key>value10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>value9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>field0</key>
+      <value>label</value>
+    </param>
+    <param>
+      <key>field1</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>field10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>field9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(696, 60)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rx_6</value>
+    </param>
+    <param>
+      <key>value1</key>
+      <value>10.05e6</value>
+    </param>
+    <param>
+      <key>value0</key>
+      <value>'WWV_10050'</value>
     </param>
   </block>
   <block>
@@ -147,7 +1428,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(104, 261)</value>
+      <value>(48, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -201,7 +1482,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(560, 85)</value>
+      <value>(880, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -213,7 +1494,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>"hf_data/"</value>
+      <value>"/media/icerx/icerx/hf_data/"</value>
     </param>
   </block>
   <block>
@@ -244,7 +1525,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(96, 368)</value>
+      <value>(40, 316)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -311,14 +1592,165 @@
     </param>
   </block>
   <block>
-    <key>hpsdr_hermesNB</key>
+    <key>gr_digital_rf_digital_rf_sink</key>
     <param>
-      <key>AlexRA</key>
+      <key>metadata</key>
+      <value>metadata</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>center_freqs</key>
+      <value></value>
+    </param>
+    <param>
+      <key>channel0</key>
+      <value>rx_0.label</value>
+    </param>
+    <param>
+      <key>channel1</key>
+      <value>rx_1.label</value>
+    </param>
+    <param>
+      <key>channel2</key>
+      <value>rx_2.label</value>
+    </param>
+    <param>
+      <key>channel3</key>
+      <value>rx_3.label</value>
+    </param>
+    <param>
+      <key>channel4</key>
+      <value>rx_4.label</value>
+    </param>
+    <param>
+      <key>channel5</key>
+      <value>rx_5.label</value>
+    </param>
+    <param>
+      <key>channel6</key>
+      <value>rx_6.label</value>
+    </param>
+    <param>
+      <key>channel7</key>
+      <value>ch7</value>
+    </param>
+    <param>
+      <key>channel8</key>
+      <value>ch8</value>
+    </param>
+    <param>
+      <key>channel9</key>
+      <value>ch9</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>is_continuous</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>debug</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>top_level_dir</key>
+      <value>working_dir</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file_cadence_ms</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(640, 200)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
+      <key>checksum</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>compression_level</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>gr_digital_rf_digital_rf_sink_0</value>
+    </param>
+    <param>
+      <key>ignore_tags</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>input</key>
+      <value>fc32</value>
+    </param>
+    <param>
+      <key>marching_periods</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>min_chunksize</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>7</value>
+    </param>
+    <param>
+      <key>sample_rate_denominator</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>sample_rate_numerator</key>
+      <value>int(rx_samp_rate)</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>"nowish"</value>
+    </param>
+    <param>
+      <key>stop_on_skipped</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>subdir_cadence_s</key>
+      <value>3600</value>
+    </param>
+    <param>
+      <key>uuid</key>
+      <value></value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>hpsdr_hermesNB</key>
+    <param>
+      <key>AlexRA</key>
+      <value>0xa0</value>
+    </param>
+    <param>
       <key>AlexHPF</key>
-      <value>0x20</value>
+      <value>0x00</value>
     </param>
     <param>
       <key>AlexTA</key>
@@ -346,11 +1778,11 @@
     </param>
     <param>
       <key>Intfc</key>
-      <value>"enp0s3"</value>
+      <value>"enp2s0"</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(256, 242)</value>
+      <value>(256, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -378,7 +1810,7 @@
     </param>
     <param>
       <key>num_outputs</key>
-      <value>4</value>
+      <value>7</value>
     </param>
     <param>
       <key>PTTTx</key>
@@ -390,31 +1822,31 @@
     </param>
     <param>
       <key>Rx0F</key>
-      <value>rx_0</value>
+      <value>int(rx_0.frequency)</value>
     </param>
     <param>
       <key>Rx1F</key>
-      <value>rx_1</value>
+      <value>int(rx_1.frequency)</value>
     </param>
     <param>
       <key>Rx2F</key>
-      <value>rx_2</value>
+      <value>int(rx_2.frequency)</value>
     </param>
     <param>
       <key>Rx3F</key>
-      <value>rx_3</value>
+      <value>int(rx_3.frequency)</value>
     </param>
     <param>
       <key>Rx4F</key>
-      <value>10000000</value>
+      <value>int(rx_4.frequency)</value>
     </param>
     <param>
       <key>Rx5F</key>
-      <value>10000000</value>
+      <value>int(rx_5.frequency)</value>
     </param>
     <param>
       <key>Rx6F</key>
-      <value>10000000</value>
+      <value>int(rx_6.frequency)</value>
     </param>
     <param>
       <key>Rx7F</key>
@@ -493,7 +1925,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(608, 536)</value>
+      <value>(640, 456)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -501,7 +1933,7 @@
     </param>
     <param>
       <key>_rotation</key>
-      <value>180</value>
+      <value>0</value>
     </param>
     <param>
       <key>grid</key>
@@ -525,7 +1957,7 @@
     </param>
     <param>
       <key>label1</key>
-      <value>RX0</value>
+      <value>'{!s} MHz'.format(rx_0.frequency*1e-6)</value>
     </param>
     <param>
       <key>width1</key>
@@ -557,7 +1989,7 @@
     </param>
     <param>
       <key>label2</key>
-      <value>RX1</value>
+      <value>'{!s} MHz'.format(rx_1.frequency*1e-6)</value>
     </param>
     <param>
       <key>width2</key>
@@ -573,7 +2005,7 @@
     </param>
     <param>
       <key>label3</key>
-      <value>RX2</value>
+      <value>'{!s} MHz'.format(rx_2.frequency*1e-6)</value>
     </param>
     <param>
       <key>width3</key>
@@ -589,7 +2021,7 @@
     </param>
     <param>
       <key>label4</key>
-      <value>Rx3</value>
+      <value>'{!s} MHz'.format(rx_3.frequency*1e-6)</value>
     </param>
     <param>
       <key>width4</key>
@@ -605,7 +2037,7 @@
     </param>
     <param>
       <key>label5</key>
-      <value></value>
+      <value>'{!s} MHz'.format(rx_4.frequency*1e-6)</value>
     </param>
     <param>
       <key>width5</key>
@@ -621,7 +2053,7 @@
     </param>
     <param>
       <key>label6</key>
-      <value></value>
+      <value>'{!s} MHz'.format(rx_5.frequency*1e-6)</value>
     </param>
     <param>
       <key>width6</key>
@@ -637,7 +2069,7 @@
     </param>
     <param>
       <key>label7</key>
-      <value></value>
+      <value>'{!s} MHz'.format(rx_6.frequency*1e-6)</value>
     </param>
     <param>
       <key>width7</key>
@@ -685,11 +2117,11 @@
     </param>
     <param>
       <key>name</key>
-      <value>QT GUI Plot</value>
+      <value>Received Spectrum</value>
     </param>
     <param>
       <key>nconnections</key>
-      <value>4</value>
+      <value>7</value>
     </param>
     <param>
       <key>showports</key>
@@ -744,178 +2176,6 @@
       <value>dB</value>
     </param>
   </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(96, 64)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>rx_0</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>rx0</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value>a</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>intx</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>3675000</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(184, 64)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>rx_1</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>rx1</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value>b</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>intx</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>7175000</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(272, 64)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>rx_2</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>rx2</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value>c</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>intx</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>10100000</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(352, 64)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>rx_3</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>rx3</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value>d</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>intx</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>14175000</value>
-    </param>
-  </block>
   <connection>
     <source_block_id>analog_sig_source_x_1</source_block_id>
     <sink_block_id>hpsdr_hermesNB_0</sink_block_id>
@@ -924,9 +2184,21 @@
   </connection>
   <connection>
     <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
     <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>hpsdr_hermesNB_0</source_block_id>
@@ -936,14 +2208,62 @@
   </connection>
   <connection>
     <source_block_id>hpsdr_hermesNB_0</source_block_id>
-    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
     <source_key>2</source_key>
     <sink_key>2</sink_key>
   </connection>
   <connection>
     <source_block_id>hpsdr_hermesNB_0</source_block_id>
     <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>2</source_key>
+    <sink_key>2</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
     <source_key>3</source_key>
     <sink_key>3</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>3</source_key>
+    <sink_key>3</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
+    <source_key>4</source_key>
+    <sink_key>4</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>4</source_key>
+    <sink_key>4</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
+    <source_key>5</source_key>
+    <sink_key>5</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>5</source_key>
+    <sink_key>5</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>gr_digital_rf_digital_rf_sink_0</sink_block_id>
+    <source_key>6</source_key>
+    <sink_key>6</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>hpsdr_hermesNB_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>6</source_key>
+    <sink_key>6</sink_key>
   </connection>
 </flow_graph>
