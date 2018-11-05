@@ -32,6 +32,7 @@ a system based on Ubuntu 16.04/Linux Mint 18 or later.
 
 2.  The standard development environment plus tools needed for gnuradio.
     Install them with:
+    
 	* sudo apt-get install build-essential
 	* sudo apt-get build-dep gnuradio
 
@@ -42,25 +43,16 @@ a system based on Ubuntu 16.04/Linux Mint 18 or later.
 	  instructions, but use whatever name you'd like.
 
 	* Issue these commands:
-		cd ~/gr-projects
-		git clone https://github.com/Tom-McDermott/gr-hpsdr
-		cd gr-hpsdr
-		mkdir build 
-		cd build 
-		cmake ..
-		make 
-		sudo make install 
-		sudo ldconfig 
 
-	* cd ~/gr-projects
-	* git clone https://github.com/Tom-McDermott/gr-hpsdr.git
-	* cd gr-hpsdr
-	* mkdir build 
-	* cd build 
-	* cmake ..
-	* make 
-	* sudo make install 
-	* sudo ldconfig 
+		* cd ~/gr-projects
+		* git clone https://github.com/Tom-McDermott/gr-hpsdr.git
+		* cd gr-hpsdr
+		* mkdir build 
+		* cd build 
+		* cmake ..
+		* make 
+		* sudo make install 
+		* sudo ldconfig 
 
 4.  The MIT-Haystack "Digital RF" blocks.  Here is how to install them:
 
@@ -69,10 +61,7 @@ a system based on Ubuntu 16.04/Linux Mint 18 or later.
 		sudo apt-get install libhdf5-dev python-dev
 		python-numpy gnuradio-dev libboost-dev swig python-h5py
 		python-tz python-dateutil python-setuptools
-		sudo apt-get install Build: libhdf5-dev python-dev
-		python-numpy gnuradio-dev libboost-dev swig python-h5py
-		libhdf5 pytz python-dateutil python-setuptools
-
+		
 	  (Some of these will probably be already installed)
 
 	* Issue these commands:
@@ -81,7 +70,7 @@ a system based on Ubuntu 16.04/Linux Mint 18 or later.
 		* cd digital_rf
 		* mkdir build
 		* cd build
-		*cmake ..
+		* cmake ..
 		* make
 		* sudo make install
 		* sudo ldconfig
