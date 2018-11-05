@@ -1,5 +1,8 @@
-hpsdr_multirx -- 11 August 2017 -- John Ackermann N8UR -- jra@febo.com
-Modified 5 November 2018 -- Nathaniel Frissell W2NAF -- nathaniel.a.frissell@njit.edu
+hpsdr_multirx
+
+-- 11 August 2017 -- John Ackermann N8UR -- jra@febo.com
+
+-- Modified 5 November 2018 -- Nathaniel Frissell W2NAF -- nathaniel.a.frissell@njit.edu
 
 The hpsdr_multirx.grc Gnuradio flowgraph allow SDR receivers that support
 the HPSDR "old protocol" to record semi-wideband (384ksample/second)
