@@ -1,4 +1,5 @@
 hpsdr_multirx -- 11 August 2017 -- John Ackermann N8UR -- jra@febo.com
+Modified 5 November 2018 -- Nathaniel Frissell W2NAF -- nathaniel.a.frissell@njit.edu
 
 The hpsdr_multirx.grc Gnuradio flowgraph allow SDR receivers that support
 the HPSDR "old protocol" to record semi-wideband (384ksample/second)
@@ -173,3 +174,17 @@ recording four 384ksample/second channels. If you see underruns
 disabling the frequency sink block.  If you still have errors, you mayi
 need to reduce the number of receivers.
 
+# Use with the Red Pitaya
+This script may be used with a Red Pitaya by running Pavel Demin's 
+SDR Reciever Compatible with HPSDR. The Red Pitaya image and instructions
+can be found here: http://pavel-demin.github.io/red-pitaya-notes/sdr-transceiver-hpsdr/
+
+Note that Pavel has many flavors of his Red Pitaya SDR Code. Be sure to
+run sdr-receiver-hpsdr, not one of the other variants. The receiver code
+allows for more slice receivers to fit on the FPGA by not including a
+tranmitter (as in sdr-transceiver-hpsdr). Also, note that HPSDR is a 
+different protocol than some similarly named variants, such as sdr-transceiver.
+
+Pavel currently has two versions of the HPSDR receiver:
+- eight receivers running at 192 kSPS (current version)
+- six receivers running at 384 kSPS (older version, available at https://github.com/pavel-demin/red-pitaya-notes/releases/tag/20171012)
