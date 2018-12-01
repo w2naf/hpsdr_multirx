@@ -102,54 +102,22 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
         for rx_id,rx_dct in rxs.items():
             self.add_waterfall(rx_id)
 
-        self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
-        	1024, #size
-        	firdes.WIN_BLACKMAN_hARRIS, #wintype
-        	000000, #fc
-        	rx_samp_rate, #bw
-        	'Received Spectrum', #name
-        	7 #number of inputs
-        )
-        self.qtgui_freq_sink_x_0.set_update_time(0.10)
-        self.qtgui_freq_sink_x_0.set_y_axis(-160, -20)
-        self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
-        self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
-        self.qtgui_freq_sink_x_0.enable_autoscale(False)
-        self.qtgui_freq_sink_x_0.enable_grid(True)
-        self.qtgui_freq_sink_x_0.set_fft_average(1.0)
-        self.qtgui_freq_sink_x_0.enable_axis_labels(True)
-        self.qtgui_freq_sink_x_0.enable_control_panel(False)
+        self.add_frequency_display()
 
-        if not True:
-          self.qtgui_freq_sink_x_0.disable_legend()
+        freqs = [0]*7
+        for rx_id,rx_dct in rxs.items():
+            freqs [rx_id]  = int(rx_dct['frequency'])
 
-        if "complex" == "float" or "complex" == "msg_float":
-          self.qtgui_freq_sink_x_0.set_plot_pos_half(not True)
+        self.hpsdr_hermesNB_0 = hpsdr.hermesNB(freqs[0],freqs[1],freqs[2],freqs[3],freqs[4],freqs[5],freqs[6], 10000000, 10000000, 0, 0, 1, 1, 0, rx_samp_rate, "enp2s0", "0xF0", 0xa0, 0, 0x00, 0x10, 0, 7, "*")
 
-        labels = ['{!s} MHz'.format(rx_0.frequency*1e-6), '{!s} MHz'.format(rx_1.frequency*1e-6), '{!s} MHz'.format(rx_2.frequency*1e-6), '{!s} MHz'.format(rx_3.frequency*1e-6), '{!s} MHz'.format(rx_4.frequency*1e-6),
-                  '{!s} MHz'.format(rx_5.frequency*1e-6), '{!s} MHz'.format(rx_6.frequency*1e-6), '', '', '']
-        widths = [1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-                  1.0, 1.0, 1.0, 1.0, 1.0]
-        for i in xrange(7):
-            if len(labels[i]) == 0:
-                self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_freq_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_freq_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_freq_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
+        channels    = []
+        for rx_id,rx_dct in rxs.items():
+            channels.append(rx_dct['label'])
 
-        self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
-        self.hpsdr_hermesNB_0 = hpsdr.hermesNB(int(rx_0.frequency), int(rx_1.frequency), int(rx_2.frequency), int(rx_3.frequency), int(rx_4.frequency), int(rx_5.frequency), int(rx_6.frequency), 10000000, 10000000, 0, 0, 1, 1, 0, rx_samp_rate, "enp2s0", "0xF0", 0xa0, 0, 0x00, 0x10, 0, 7, "*")
         self.gr_digital_rf_digital_rf_sink_0 = \
             gr_digital_rf.digital_rf_sink(
                 working_dir,
-                channels=['CHU_3300', 'HAM_3596', 'CHU_7850', 'HAM_7096', 'CHU_14670', 'HAM_14096', 'WWV_10050'],
+                channels=channels,
                 dtype=np.complex64,
                 subdir_cadence_secs=3600,
                 file_cadence_millisecs=1000,
@@ -165,28 +133,17 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
                 stop_on_skipped=False, debug=False,
                 min_chunksize=None if 0==0 else 0,
             )
-
         self.analog_sig_source_x_1 = analog.sig_source_c(48000, analog.GR_COS_WAVE, -1000, 0.95, 0)
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.analog_sig_source_x_1, 0), (self.hpsdr_hermesNB_0, 0))
-#        self.connect((self.hpsdr_hermesNB_0, 0), (self.gr_digital_rf_digital_rf_sink_0, 0))
-#        self.connect((self.hpsdr_hermesNB_0, 1), (self.gr_digital_rf_digital_rf_sink_0, 1))
-#        self.connect((self.hpsdr_hermesNB_0, 2), (self.gr_digital_rf_digital_rf_sink_0, 2))
-#        self.connect((self.hpsdr_hermesNB_0, 3), (self.gr_digital_rf_digital_rf_sink_0, 3))
-#        self.connect((self.hpsdr_hermesNB_0, 4), (self.gr_digital_rf_digital_rf_sink_0, 4))
-#        self.connect((self.hpsdr_hermesNB_0, 5), (self.gr_digital_rf_digital_rf_sink_0, 5))
-#        self.connect((self.hpsdr_hermesNB_0, 6), (self.gr_digital_rf_digital_rf_sink_0, 6))
+        for rx_id,rx_dct in rxs.items():
+            self.connect((self.hpsdr_hermesNB_0, rx_id), (self.gr_digital_rf_digital_rf_sink_0, rx_id))
 
-        self.connect((self.hpsdr_hermesNB_0, 0), (self.qtgui_freq_sink_x_0, 0))
-        self.connect((self.hpsdr_hermesNB_0, 1), (self.qtgui_freq_sink_x_0, 1))
-        self.connect((self.hpsdr_hermesNB_0, 2), (self.qtgui_freq_sink_x_0, 2))
-        self.connect((self.hpsdr_hermesNB_0, 3), (self.qtgui_freq_sink_x_0, 3))
-        self.connect((self.hpsdr_hermesNB_0, 4), (self.qtgui_freq_sink_x_0, 4))
-        self.connect((self.hpsdr_hermesNB_0, 5), (self.qtgui_freq_sink_x_0, 5))
-        self.connect((self.hpsdr_hermesNB_0, 6), (self.qtgui_freq_sink_x_0, 6))
+        for rx_id,rx_dct in rxs.items():
+            self.connect((self.hpsdr_hermesNB_0, rx_id), (self.qtgui_freq_sink_x_0, rx_id))
 
         for rx_id,rx_dct in rxs.items():
             self.connect((self.hpsdr_hermesNB_0, rx_id), (rx_dct['qtgui_waterfall'], 0))
@@ -319,6 +276,53 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
         self.top_layout.addWidget(_qtgui_waterfall_win)
 
         rxs[rx_id]['qtgui_waterfall'] = qtgui_waterfall
+
+    def add_frequency_display(self):
+        labels      = ['']*10
+        for rx_id,rx_dct in rxs.items():
+            labels[rx_id] = '{!s} MHz'.format(rx_dct['frequency']*1e-6)
+
+        self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
+        	1024, #size
+        	firdes.WIN_BLACKMAN_hARRIS, #wintype
+        	000000, #fc
+        	rx_samp_rate, #bw
+        	'Received Spectrum', #name
+        	len(rxs) #number of inputs
+        )
+        self.qtgui_freq_sink_x_0.set_update_time(0.10)
+        self.qtgui_freq_sink_x_0.set_y_axis(-160, -20)
+        self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
+        self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
+        self.qtgui_freq_sink_x_0.enable_autoscale(False)
+        self.qtgui_freq_sink_x_0.enable_grid(True)
+        self.qtgui_freq_sink_x_0.set_fft_average(1.0)
+        self.qtgui_freq_sink_x_0.enable_axis_labels(True)
+        self.qtgui_freq_sink_x_0.enable_control_panel(False)
+
+        if not True:
+          self.qtgui_freq_sink_x_0.disable_legend()
+
+        if "complex" == "float" or "complex" == "msg_float":
+          self.qtgui_freq_sink_x_0.set_plot_pos_half(not True)
+
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(7):
+            if len(labels[i]) == 0:
+                self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_freq_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_freq_sink_x_0.set_line_width(i, widths[i])
+            self.qtgui_freq_sink_x_0.set_line_color(i, colors[i])
+            self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
 
 def main(top_block_cls=hpsdr_multirx, options=None):
 
