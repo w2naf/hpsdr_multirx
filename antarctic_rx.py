@@ -21,6 +21,8 @@ if __name__ == '__main__':
             print "Warning: failed to XInitThreads()"
 
 def struct(data): return type('Struct', (object,), data)()
+
+import os
 from PyQt5 import Qt
 from PyQt5 import Qt, QtCore
 from datetime import datetime
@@ -37,17 +39,21 @@ import sip
 import sys
 from gnuradio import qtgui
 
-from collections import OrderedDict
-rxs = OrderedDict()
-rxs[0] = {'label': 'CHU_3300', 'frequency': 3.33e6, }
-rxs[1] = {'label': 'HAM_3596', 'frequency': 3.596e6, }
-rxs[2] = {'label': 'CHU_7850', 'frequency': 7.096e6, }
-rxs[3] = {'label': 'HAM_7096', 'frequency': 7.096e6, }
-rxs[4] = {'label': 'CHU_14670', 'frequency': 14.67e6, }
-rxs[5] = {'label': 'HAM_14096', 'frequency': 14.096e6, }
-rxs[6] = {'label': 'WWV_10050', 'frequency': 10.05e6, }
+rxs = []
+rxs.append({'label': 'CHU_3300',  'frequency':  3.330e6})
+rxs.append({'label': 'HAM_3596',  'frequency':  3.596e6})
+rxs.append({'label': 'CHU_7850',  'frequency':  7.096e6})
+rxs.append({'label': 'HAM_7096',  'frequency':  7.096e6})
+rxs.append({'label': 'CHU_14670', 'frequency': 14.670e6})
+rxs.append({'label': 'HAM_14096', 'frequency': 14.096e6})
+rxs.append({'label': 'WWV_10050', 'frequency': 10.050e6})
 
-rx_samp_rate = 192000
+rx_samp_rate    = 192000
+working_dir     = "/media/icerx/icerx/hf_data/"
+metadata        = {'call':'W2NAF','grid':'<6-digit-grid>','rx':'Red Pitaya','ant':'DXE RF-PRO-1B'}
+
+if not os.path.exists(working_dir):
+    os.makedirs(working_dir)
 
 class hpsdr_multirx(gr.top_block, Qt.QWidget):
 
@@ -82,37 +88,28 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.working_dir = working_dir = "/media/icerx/icerx/hf_data/"
-        self.timestamp_iso = timestamp_iso = datetime.utcnow().isoformat()+"Z"
-        self.rx_samp_rate = rx_samp_rate = 192000
-        self.rx_6 = rx_6 = struct({'label': 'WWV_10050', 'frequency': 10.05e6, })
-        self.rx_5 = rx_5 = struct({'label': 'HAM_14096', 'frequency': 14.096e6, })
-        self.rx_4 = rx_4 = struct({'label': 'CHU_14670', 'frequency': 14.67e6, })
-        self.rx_3 = rx_3 = struct({'label': 'HAM_7096', 'frequency': 7.096e6, })
-        self.rx_2 = rx_2 = struct({'label': 'CHU_7850', 'frequency': 7.096e6, })
-        self.rx_1 = rx_1 = struct({'label': 'HAM_3596', 'frequency': 3.596e6, })
-        self.rx_0 = rx_0 = struct({'label': 'CHU_3300', 'frequency': 3.33e6, })
-        self.metadata = metadata = {'call':'W2NAF','grid':'<6-digit-grid>','rx':'Red Pitaya','ant':'DXE RF-PRO-1B'}
-        self.file_stamp = file_stamp = datetime.now().strftime("%Y.%m.%d.%H.%M.%S")
+        self.timestamp_iso  = timestamp_iso = datetime.utcnow().isoformat()+"Z"
+        self.file_stamp     = file_stamp    = datetime.now().strftime("%Y.%m.%d.%H.%M.%S")
 
         ##################################################
         # Blocks
         ##################################################
         
-        for rx_id,rx_dct in rxs.items():
+        for rx_id,rx_dct in enumerate(rxs):
             self.add_waterfall(rx_id)
 
         self.add_frequency_display()
 
         freqs = [0]*7
-        for rx_id,rx_dct in rxs.items():
-            freqs [rx_id]  = int(rx_dct['frequency'])
+        for rx_id,rx_dct in enumerate(rxs):
+            freqs[rx_id]  = int(rx_dct['frequency'])
 
-        self.hpsdr_hermesNB_0 = hpsdr.hermesNB(freqs[0],freqs[1],freqs[2],freqs[3],freqs[4],freqs[5],freqs[6], 10000000, 10000000, 0, 0, 1, 1, 0, rx_samp_rate, "enp2s0", "0xF0", 0xa0, 0, 0x00, 0x10, 0, 7, "*")
+        self.hpsdr_hermesNB_0 = hpsdr.hermesNB(freqs[0],freqs[1],freqs[2],freqs[3],freqs[4],freqs[5],freqs[6],
+                10000000, 10000000, 0, 0, 1, 1, 0, rx_samp_rate, "enp2s0", "0xF0", 0xa0, 0, 0x00, 0x10, 0, len(rxs), "*")
 
-        channels    = []
-        for rx_id,rx_dct in rxs.items():
-            channels.append(rx_dct['label'])
+        channels    = ['']*len(rxs)
+        for rx_id,rx_dct in enumerate(rxs):
+            channels[rx_id] = rx_dct['label']
 
         self.gr_digital_rf_digital_rf_sink_0 = \
             gr_digital_rf.digital_rf_sink(
@@ -133,106 +130,27 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
                 stop_on_skipped=False, debug=False,
                 min_chunksize=None if 0==0 else 0,
             )
+
         self.analog_sig_source_x_1 = analog.sig_source_c(48000, analog.GR_COS_WAVE, -1000, 0.95, 0)
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.analog_sig_source_x_1, 0), (self.hpsdr_hermesNB_0, 0))
-        for rx_id,rx_dct in rxs.items():
+
+        for rx_id,rx_dct in enumerate(rxs):
             self.connect((self.hpsdr_hermesNB_0, rx_id), (self.gr_digital_rf_digital_rf_sink_0, rx_id))
 
-        for rx_id,rx_dct in rxs.items():
+        for rx_id,rx_dct in enumerate(rxs):
             self.connect((self.hpsdr_hermesNB_0, rx_id), (self.qtgui_freq_sink_x_0, rx_id))
 
-        for rx_id,rx_dct in rxs.items():
+        for rx_id,rx_dct in enumerate(rxs):
             self.connect((self.hpsdr_hermesNB_0, rx_id), (rx_dct['qtgui_waterfall'], 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "hpsdr_multirx")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
-
-    def get_working_dir(self):
-        return self.working_dir
-
-    def set_working_dir(self, working_dir):
-        self.working_dir = working_dir
-
-    def get_timestamp_iso(self):
-        return self.timestamp_iso
-
-    def set_timestamp_iso(self, timestamp_iso):
-        self.timestamp_iso = timestamp_iso
-
-    def get_rx_samp_rate(self):
-        return self.rx_samp_rate
-
-    def set_rx_samp_rate(self, rx_samp_rate):
-        self.rx_samp_rate = rx_samp_rate
-        self.qtgui_waterfall_sink_x_0_5.set_frequency_range(rx_6.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0_4.set_frequency_range(rx_5.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0_3.set_frequency_range(rx_4.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0_2.set_frequency_range(rx_3.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0_1.set_frequency_range(rx_2.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0_0.set_frequency_range(rx_1.frequency, self.rx_samp_rate)
-        self.qtgui_waterfall_sink_x_0.set_frequency_range(rx_0.frequency, self.rx_samp_rate)
-        self.qtgui_freq_sink_x_0.set_frequency_range(000000, self.rx_samp_rate)
-        self.hpsdr_hermesNB_0.set_RxSampRate(self.rx_samp_rate)
-
-    def get_rx_6(self):
-        return self.rx_6
-
-    def set_rx_6(self, rx_6):
-        self.rx_6 = rx_6
-
-    def get_rx_5(self):
-        return self.rx_5
-
-    def set_rx_5(self, rx_5):
-        self.rx_5 = rx_5
-
-    def get_rx_4(self):
-        return self.rx_4
-
-    def set_rx_4(self, rx_4):
-        self.rx_4 = rx_4
-
-    def get_rx_3(self):
-        return self.rx_3
-
-    def set_rx_3(self, rx_3):
-        self.rx_3 = rx_3
-
-    def get_rx_2(self):
-        return self.rx_2
-
-    def set_rx_2(self, rx_2):
-        self.rx_2 = rx_2
-
-    def get_rx_1(self):
-        return self.rx_1
-
-    def set_rx_1(self, rx_1):
-        self.rx_1 = rx_1
-
-    def get_rx_0(self):
-        return self.rx_0
-
-    def set_rx_0(self, rx_0):
-        self.rx_0 = rx_0
-
-    def get_metadata(self):
-        return self.metadata
-
-    def set_metadata(self, metadata):
-        self.metadata = metadata
-
-    def get_file_stamp(self):
-        return self.file_stamp
-
-    def set_file_stamp(self, file_stamp):
-        self.file_stamp = file_stamp
 
     def add_waterfall(self,rx_id):
         rx_frequency    = rxs[rx_id]['frequency']
@@ -279,7 +197,7 @@ class hpsdr_multirx(gr.top_block, Qt.QWidget):
 
     def add_frequency_display(self):
         labels      = ['']*10
-        for rx_id,rx_dct in rxs.items():
+        for rx_id,rx_dct in enumerate(rxs):
             labels[rx_id] = '{!s} MHz'.format(rx_dct['frequency']*1e-6)
 
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
@@ -340,7 +258,6 @@ def main(top_block_cls=hpsdr_multirx, options=None):
         tb.wait()
     qapp.aboutToQuit.connect(quitting)
     qapp.exec_()
-
 
 if __name__ == '__main__':
     main()
